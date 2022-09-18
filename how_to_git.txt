@@ -1,0 +1,14 @@
+to create a new repository local and remote :
+
+create a new repo in github(do not initialize)
+make a local git folder (which has .git folder in it)
+now connect using the link of the github repo
+
+(FOR REFERENCES THE ATLASSIAN WEBSITE IS PREFERABLE)
+for normal usage/pushing to github on existing repo:
+
+check using git status
+git add .
+git commit -m "Message"
+git push origin main
+
