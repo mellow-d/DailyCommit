@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define SIZE 1000
-
+int count=0;
 void heapify(int H[SIZE],int n)
 {
     int i,k,val,j,flag;
@@ -23,11 +23,14 @@ void heapify(int H[SIZE],int n)
             if(val>=H[j])
             {
                 flag=1;
+                count++;
+
             }
             else
             {
                 H[k]=H[j];
                 k=j;
+                count++;
             }
         }
         H[k]=val;
@@ -70,6 +73,30 @@ int main()
     for(i=1;i<=n;i++)
     {
         printf("%d\t",H[i]);
+    }
+    printf("\nSIZE\tASCENDING\tDESCENDING\tRANDOM\n");
+    for(i=1;i<517;i=i*2)
+    {
+        int j,c1,c2,c3;
+        int H1[SIZE],H2[SIZE],H3[SIZE];
+        for(j=0;j<i;j++)
+        {
+            H1[j]=j;
+            H2[j]=i-j;
+            H3[j]= rand()%i;
+        }
+        count=0;
+        Heapsort(H1,i);
+        c1= count;it 
+        count=0;
+        Heapsort(H2,i);
+        c2= count;
+        count=0;
+        Heapsort(H3,i);
+        c3= count;
+        printf("%d\t%d\t%d\t%d",i,c1,c2,c3);
+        printf("\n");
+
     }
     return 0;
 }
