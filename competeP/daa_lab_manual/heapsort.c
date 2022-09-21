@@ -87,7 +87,7 @@ int main()
         }
         count=0;
         Heapsort(H1,i);
-        c1= count;it 
+        c1= count;
         count=0;
         Heapsort(H2,i);
         c2= count;
